@@ -2,8 +2,8 @@ package fundamental;
 
 public class SinglyLinked {
 
-	Node head = null;
-	int len = 0;
+	private Node head = null;
+	private int len = 0;
 
 	public SinglyLinked() {
 		
@@ -29,6 +29,15 @@ public class SinglyLinked {
 
 		sl.printList();
 
+		System.out.println("Removing from Head of list...");
+		System.out.println(sl.getHead() == c); // true
+		sl.removeNodeFromHead();
+		System.out.println(sl.getHead() != c); // true
+		System.out.println(sl.getHead() == b); // true
+		System.out.println(sl.getLen() == 2); // true
+		System.out.println(c.getNext() == null); // true
+
+
 		System.out.println("**********Test complete**********");
 
 	}
@@ -39,6 +48,7 @@ public class SinglyLinked {
 
 		if (head == null) {
 			head = n;
+			len++;
 		} else {
 			temp = head;
 			head = n;
@@ -46,6 +56,23 @@ public class SinglyLinked {
 			len++;
 		}
 		return;
+	}
+
+	public Node removeNodeFromHead(){
+		Node temp = null;
+		temp = head;
+		head = head.getNext();
+		temp.setNext(null);
+		len--;
+		return temp;
+	}
+
+	public Node getHead(){
+		return head;
+	}
+
+	public int getLen(){
+		return len;
 	}
 
 	public void printList(){
