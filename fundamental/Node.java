@@ -13,7 +13,7 @@ public class Node {
 	}
 
 	public Object getData() {
-		return String.valueOf(data);
+		return data;
 	}
 
 	public void setData(Object newdata) {
@@ -32,7 +32,7 @@ public class Node {
 	public void setNextNull(){
 		next = null;
 	}
-	
+
 	public Node getPrev(){
 		return prev;
 	}
@@ -43,6 +43,13 @@ public class Node {
 
 	public void setPrevNull(){
 		prev = null;
+	}
+
+	public static void printNode(Node n){
+		System.out.println("Node data: "+n.getData()+
+			"\nNode next: "+n.getNext()+
+			"\nNode prev: "+n.getPrev()+
+			"\nMemory Location: "+n);
 	}
 
 }
