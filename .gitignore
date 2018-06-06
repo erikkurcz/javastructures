@@ -1,2 +1,5 @@
 data-structures-java-master/
 data-structures-java-master.zip
+*.class
+fundamental/ListBoiler.java
+fundamental/DoublyLinked.java
