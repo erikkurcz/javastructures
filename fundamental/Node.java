@@ -29,12 +29,20 @@ public class Node {
 		next = n;
 	}
 
+	public void setNextNull(){
+		next = null;
+	}
+	
 	public Node getPrev(){
 		return prev;
 	}
 
 	public void setPrev(Node n){
 		prev = n;
+	}
+
+	public void setPrevNull(){
+		prev = null;
 	}
 
 }
