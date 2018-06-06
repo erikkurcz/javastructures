@@ -1,5 +1,7 @@
 package fundamental;
 
+// TODO: docs, addNodeAtIndex, removeNodeAtIndex
+
 public class SinglyLinked {
 
 	public Node head = null;
